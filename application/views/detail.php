@@ -3,6 +3,13 @@
         <h4>DETAIL DATA MAHASISWA</h4>
         <table class="table">
             <tr>
+                <td>
+                    <img src="<?php echo base_url(); ?>assets/foto/<?php echo $detail->foto; ?>" width="90" height="110">
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
                 <th>Nama Lengkap</th>
                 <td><?php echo $detail->nama; ?></td>
             </tr>
@@ -32,5 +39,6 @@
             </tr>
 
         </table>
+        <a href="<?php echo base_url('mahasiswa/index') ?>" class="btn btn-primary">Kembali</a>
     </section>
 </div>

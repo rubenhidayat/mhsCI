@@ -20,6 +20,22 @@ class Mahasiswa extends CI_Controller
         $alamat = $this->input->post('alamat');
         $email = $this->input->post('email');
         $no_telp = $this->input->post('no_telp');
+        $foto = $_FILES['foto'];
+        if ($foto = '') {
+            echo 'upload gagal';
+            die();
+        } else {
+            $config['upload_path'] = './assets/foto';
+            $config['allowed_types'] = 'jpg|png|jpeg|gif';
+
+            $this->load->library('upload', $config);
+            if (!$this->upload->do_upload('foto')) {
+                echo 'upload gagal';
+                die();
+            } else {
+                $foto = $this->upload->data('file_name');
+            }
+        }
 
         $data = array(
             'nama' => $nama,
@@ -28,7 +44,8 @@ class Mahasiswa extends CI_Controller
             'jurusan' => $jurusan,
             'alamat' => $alamat,
             'email' => $email,
-            'no_telp' => $no_telp
+            'no_telp' => $no_telp,
+            'foto' => $foto
         );
 
         $this->m_mahasiswa->input_data($data, 'tb_mahasiswa');
@@ -63,6 +80,22 @@ class Mahasiswa extends CI_Controller
         $alamat = $this->input->post('alamat');
         $email = $this->input->post('email');
         $no_telp = $this->input->post('no_telp');
+        $foto = $_FILES['foto'];
+        if ($foto = '') {
+            echo 'upload gagal';
+            die();
+        } else {
+            $config['upload_path'] = './assets/foto';
+            $config['allowed_types'] = 'jpg|png|jpeg|gif';
+
+            $this->load->library('upload', $config);
+            if (!$this->upload->do_upload('foto')) {
+                echo 'upload gagal';
+                die();
+            } else {
+                $foto = $this->upload->data('file_name');
+            }
+        }
 
         $data = array(
             'nama' => $nama,
@@ -71,7 +104,8 @@ class Mahasiswa extends CI_Controller
             'jurusan' => $jurusan,
             'alamat' => $alamat,
             'email' => $email,
-            'no_telp' => $no_telp
+            'no_telp' => $no_telp,
+            'foto' => $foto
         );
 
         $where = array(

@@ -61,35 +61,39 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form method="post" action="<?php echo base_url() . 'mahasiswa/tambah_aksi'; ?>">
-                                <label for="nama">Nama Mahasiswa</label>
-                                <input type="text" name="nama" class="form-control">
+                            <?php echo form_open_multipart('mahasiswa/tambah_aksi'); ?>
+                            <label for="nama">Nama Mahasiswa</label>
+                            <input type="text" name="nama" class="form-control">
 
-                                <label for="nim">NIM</label>
-                                <input type="text" name="nim" class="form-control">
+                            <label for="nim">NIM</label>
+                            <input type="text" name="nim" class="form-control">
 
-                                <label for="tgl_lahir">Tanggal Lahir</label>
-                                <input type="date" name="tgl_lahir" class="form-control">
+                            <label for="tgl_lahir">Tanggal Lahir</label>
+                            <input type="date" name="tgl_lahir" class="form-control">
 
-                                <label for="jurusan">Jurusan</label>
-                                <select name="jurusan" id="jurusan" class="form-control">
-                                    <option value="Manajemen Informatika">Manajemen Informatika</option>
-                                    <option value="TEKNIK INFORMATIKA">TEKNIK INFORMATIKA</option>
-                                </select>
+                            <label for="jurusan">Jurusan</label>
+                            <select name="jurusan" id="jurusan" class="form-control">
+                                <option value="Manajemen Informatika">Manajemen Informatika</option>
+                                <option value="TEKNIK INFORMATIKA">TEKNIK INFORMATIKA</option>
+                            </select>
 
-                                <label for="alamat">Alamat</label>
-                                <input type="text" name="alamat" class="form-control">
+                            <label for="alamat">Alamat</label>
+                            <input type="text" name="alamat" class="form-control">
 
-                                <label for="email">Email</label>
-                                <input type="text" name="email" class="form-control">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" class="form-control">
 
-                                <label for="no_telp">Nomor Telepon</label>
-                                <input type="number" name="no_telp" class="form-control">
+                            <label for="no_telp">Nomor Telepon</label>
+                            <input type="number" name="no_telp" class="form-control">
 
-                                <br>
-                                <button type="reset" class="btn btn-danger" data-dismiss="modal">Reset</button>
-                                <button type="submit" class="btn btn-primary">Save changes</button>
-                            </form>
+                            <label for="foto">Upload Foto</label>
+                            <input type="file" name="foto" class="form-control">
+
+                            <br>
+                            <button type="reset" class="btn btn-danger" data-dismiss="modal">Reset</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                            <?php echo form_close(); ?>
+
                         </div>
                     </div>
                 </div>
