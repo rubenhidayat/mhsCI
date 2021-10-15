@@ -41,6 +41,9 @@
                                 <?php echo anchor('mahasiswa/edit/' . $mhs->id, '<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>'); ?>
 
                             </td>
+                            <td>
+                                <?php echo anchor('mahasiswa/detail/' . $mhs->id, '<div class="btn btn-success btn-sm"><i class="fa fa-search-plus"></i></div>'); ?>
+                            </td>
                         </tr>
                     <?php endforeach ?>
                 </table>
