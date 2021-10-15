@@ -77,6 +77,15 @@
                                     <option value="TEKNIK INFORMATIKA">TEKNIK INFORMATIKA</option>
                                 </select>
 
+                                <label for="alamat">Alamat</label>
+                                <input type="text" name="alamat" class="form-control">
+
+                                <label for="email">Email</label>
+                                <input type="text" name="email" class="form-control">
+
+                                <label for="no_telp">Nomor Telepon</label>
+                                <input type="number" name="no_telp" class="form-control">
+
                                 <br>
                                 <button type="reset" class="btn btn-danger" data-dismiss="modal">Reset</button>
                                 <button type="submit" class="btn btn-primary">Save changes</button>

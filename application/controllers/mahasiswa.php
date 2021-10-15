@@ -17,12 +17,18 @@ class Mahasiswa extends CI_Controller
         $nim = $this->input->post('nim');
         $tgl_lahir = $this->input->post('tgl_lahir');
         $jurusan = $this->input->post('jurusan');
+        $alamat = $this->input->post('alamat');
+        $email = $this->input->post('email');
+        $no_telp = $this->input->post('no_telp');
 
         $data = array(
             'nama' => $nama,
             'nim' => $nim,
             'tgl_lahir' => $tgl_lahir,
-            'jurusan' => $jurusan
+            'jurusan' => $jurusan,
+            'alamat' => $alamat,
+            'email' => $email,
+            'no_telp' => $no_telp
         );
 
         $this->m_mahasiswa->input_data($data, 'tb_mahasiswa');
@@ -54,12 +60,18 @@ class Mahasiswa extends CI_Controller
         $nim = $this->input->post('nim');
         $tgl_lahir = $this->input->post('tgl_lahir');
         $jurusan = $this->input->post('jurusan');
+        $alamat = $this->input->post('alamat');
+        $email = $this->input->post('email');
+        $no_telp = $this->input->post('no_telp');
 
         $data = array(
             'nama' => $nama,
             'nim' => $nim,
             'tgl_lahir' => $tgl_lahir,
-            'jurusan' => $jurusan
+            'jurusan' => $jurusan,
+            'alamat' => $alamat,
+            'email' => $email,
+            'no_telp' => $no_telp
         );
 
         $where = array(

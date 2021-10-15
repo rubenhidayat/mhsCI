@@ -25,6 +25,23 @@
                         <option value="TEKNIK INFORMATIKA">TEKNIK INFORMATIKA</option>
                     </select>
                 </div>
+
+                <div class="form-group">
+                    <label for="alamat">Alamat</label>
+                    <input type="text" name="alamat" class="form-control" value="<?php echo $mhs->alamat; ?>">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" class="form-control" value="<?php echo $mhs->email; ?>">
+                </div>
+
+                <div class="form-group">
+                    <label for="no_telp">Nomor Telepon</label>
+                    <input type="text" name="no_telp" class="form-control" value="<?php echo $mhs->no_telp; ?>">
+                </div>
+
+
                 <div class="form-group">
                     <button type="reset" class="btn btn-danger" data-dismiss="modal">Reset</button>
                     <button type="submit" class="btn btn-primary">Simpan</button>
