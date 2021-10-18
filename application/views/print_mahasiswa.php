@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <table>
+    <table border="solid 1px">
         <tr>
             <th>No</th>
             <th>Nama</th>
